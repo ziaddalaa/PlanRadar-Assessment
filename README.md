@@ -39,11 +39,3 @@ fieldName=Short Text
 3. **Validate:** Opens **Ticket Preview** and asserts mandatory indicator (`* Short Text`).
 4. **Persist:** Saves the form, verifies the confirmation toast, and exits safely.
 
----
-
-## 💡 Key Architectural Highlights
-
-* **Resilient Locators:** Avoids dynamic hash IDs (`form-field-tf5fa98c...`) using semantic, text-anchored XPaths.
-* **JS Fallbacks:** Uses `JavascriptExecutor` to handle modal backdrop animations and hidden Tailwind inputs (`sr-only`).
-
-
