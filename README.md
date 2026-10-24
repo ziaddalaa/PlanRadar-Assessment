@@ -34,8 +34,8 @@ fieldName=Short Text
 
 ## 🧪 E2E Test Workflow (`EndToEndFormTest`)
 
-1. **Auth:** Handles cookies, logs in, and opens the **Forms & Lists** module.
-2. **Build:** Creates a form, adds a **Short Text** field, and enables the **Mandatory** setting.
-3. **Validate:** Opens **Ticket Preview** and asserts mandatory indicator (`* Short Text`).
-4. **Persist:** Saves the form, verifies the confirmation toast, and exits safely.
+The main E2E test suite (`E2ETest.java`) is decoupled into 3 sequential, dependent steps using TestNG `@Test(dependsOnMethods)`:
+1. `test01_createFormWithMandatoryField`: Builds the dynamic form with mandatory short-text rules and list attributes.
+2. `test02_linkFormToProject`: Associates the newly created form with the designated project via ID search.
+3. `test03_validateTicketMandatoryEnforcement`: Triggers negative validation on blank submission and completes ticket creation.
 

@@ -19,6 +19,10 @@ public class FormBuilderPage extends BasePage{
     private By listField = By.cssSelector("[data-testid=\"ticket_type_form_field_List_add\"]");
     private By dateField = By.cssSelector("[data-testid=\"ticket_type_form_field_Date_add\"]");
 
+    // Locators for List Field
+    private By selectListField = By.className("css-1arx8z6-indicatorContainer");
+    private By tradeListField = By.xpath("//div[@role='option' and normalize-space()='Trade']");
+
     // Locators for Bottom Actions
     private By saveButton = By.cssSelector("[data-testid=\"Save\"]");
     private By toastMessage = By.cssSelector("[data-testid='toast-message']");
@@ -82,11 +86,14 @@ public class FormBuilderPage extends BasePage{
         return this;
     }
 
-    // Clicks the List field in the Field Palette to add it to the form.
+    // Clicks the List field in the Field Palette to add it to the form & Select Trade List option.
     public FormBuilderPage addListField() {
         click(listField);
+        click(selectListField);
+        click(tradeListField);
         return this;
     }
+
 
     // Clicks the Date field in the Field Palette to add it to the form.
     public FormBuilderPage addDateField() {

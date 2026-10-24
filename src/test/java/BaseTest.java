@@ -1,8 +1,8 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import pages.DashboardPage;
 import pages.FormsPage;
 import pages.HomePage;
@@ -15,7 +15,7 @@ public class BaseTest {
 
     protected WebDriver driver;
 
-    @BeforeMethod
+    @BeforeSuite
     public void setUp() {
     String baseUrl = ConfigReader.get("baseUrl");
     ChromeOptions options = new ChromeOptions();
@@ -51,7 +51,7 @@ public class BaseTest {
         return formsPage;
     }
 
-    @AfterMethod
+    @AfterSuite
     public void tearDown(){
         driver.quit();
     }
