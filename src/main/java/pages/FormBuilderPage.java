@@ -65,10 +65,10 @@ public class FormBuilderPage extends BasePage{
         }
 
         // Step 4: Force focus OUT of the container (Blur effect)
-        try {
-            input.sendKeys(Keys.TAB);
-            clickIfDisplayed(formDescriptionInput);
-        } catch (Exception ignored) {}
+//        try {
+//            input.sendKeys(Keys.TAB);
+//            clickIfDisplayed(formDescriptionInput);
+//        } catch (Exception ignored) {}
 
         return this;
     }

@@ -11,7 +11,7 @@ public class FormsPage extends BasePage {
         super(driver);
     }
 
-    // Verifies that the Forms management page is successfully loaded.
+    // Verifies that the Forms management page is successfully loaded after closing the Form Builder.
     public boolean isFormPageLoaded() {
         return isDisplayed(createFormButton);
     }

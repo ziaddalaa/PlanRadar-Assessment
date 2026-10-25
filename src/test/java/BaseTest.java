@@ -40,10 +40,10 @@ public class BaseTest {
         homePage.acceptCookies();
 
         LoginPage loginPage = homePage.clickHeaderLoginButton();
-        loginPage.enterEmail(email);
-        loginPage.clickLoginButton();
-        loginPage.enterPassword(password);
-        loginPage.clickLoginButton();
+        loginPage.enterEmail(email)
+        .clickLoginButton()
+        .enterPassword(password)
+        .clickLoginButton();
 
         DashboardPage dashboardPage = new DashboardPage(driver);
         dashboardPage.clickFormsAndLists();

@@ -13,16 +13,19 @@ public class LoginPage extends BasePage{
         super(driver);
     }
 
-    public void enterEmail(String email) {
+    public LoginPage enterEmail(String email) {
         type(emailInput, email);
+        return this;
     }
 
-    public void clickLoginButton() {
+    public LoginPage clickLoginButton() {
         click(loginButton);
+        return this;
     }
 
-    public void enterPassword(String password) {
+    public LoginPage enterPassword(String password) {
         type(passwordInput, password);
+        return this;
     }
 
 }

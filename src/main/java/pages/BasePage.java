@@ -5,6 +5,7 @@ import org.openqa.selenium.support.ui.*;
 
 import java.time.Duration;
 
+//DRY Don't Repeat Yourself
 public class BasePage {
     protected WebDriver driver;
     protected FluentWait<WebDriver> fluentWait;
@@ -27,7 +28,7 @@ public class BasePage {
     protected void type(By locator, String text) {
         WebElement element = fluentWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         element.click();
-        element.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE); // To clear the state
         element.sendKeys(text);
     }
 
@@ -45,6 +46,7 @@ public class BasePage {
         }
     }
 
+    // For the displayed banners/ cookie banner
     protected void clickIfDisplayed(By locator) {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(1))

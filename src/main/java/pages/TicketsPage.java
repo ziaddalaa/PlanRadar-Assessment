@@ -33,7 +33,7 @@ public class TicketsPage extends BasePage{
 
     public TicketsPage selectTicket(String formName){
         // 1. Click the Form dropdown container
-        click(ticketFormSelector);
+        fluentWait.until(ExpectedConditions.elementToBeClickable(ticketFormSelector)).click();
 
         // 2. Click the matching form option from the dropdown list
         By ticketOption  = By.xpath("//div[text()='" + formName + "']");
